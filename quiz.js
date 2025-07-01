@@ -275,13 +275,16 @@ function calculateMBTI() {
 function showResult() {
   const mbti = calculateMBTI();
   const result = mbtiResults[mbti];
-  
+  const combo  = `${mbti} ${result.title}`;   // ← 4 字母 + 中文
+
+  /* -------- ① 上報 GTM -------- */
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    event: 'tea_result',
+    tea_type: combo          // 送出「ISTJ 鐵觀音守護者」
+  });
   quizPage.classList.add('hidden');
   resultPage.classList.remove('hidden');
-  
-  // resultType.textContent = mbti;
-  // resultTitle.textContent = result.title;
-  // resultDescription.textContent = result.description;
   resultImage.src = `images/${mbti}.jpg`;
   resultImage.alt = `${mbti} Character`;
 }
