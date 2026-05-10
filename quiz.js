@@ -285,7 +285,7 @@ function showResult() {
   });
   quizPage.classList.add('hidden');
   resultPage.classList.remove('hidden');
-  resultImage.src = `images/${mbti}.jpg`;
+  resultImage.src = `images/${mbti}.png`;
   resultImage.alt = `${mbti} Character`;
 }
 

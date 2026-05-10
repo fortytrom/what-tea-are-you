@@ -12,155 +12,204 @@
       theme: {
         extend: {
           colors: {
-            'matcha': {
-              50: '#f0f7f0',
-              100: '#dceddc',
-              200: '#bcdcbc',
-              300: '#8cc58c',
-              400: '#5aa85a',
-              500: '#3d8b3d',
-              600: '#2d6b2d',
-              700: '#245524',
-              800: '#1f441f',
-              900: '#1a3a1a',
-            },
-            'toast': {
-              50: '#faf7f2',
-              100: '#f4ede0',
-              200: '#e8d9c0',
-              300: '#d9c096',
-              400: '#c8a26a',
-              500: '#b8864a',
-              600: '#a6713e',
-              700: '#8a5a35',
-              800: '#704a30',
-              900: '#5c3e29',
-            },
-            'cream': {
-              50: '#fefdfb',
-              100: '#fdfbf7',
-              200: '#faf6ed',
-              300: '#f6f0e1',
-              400: '#f0e7d1',
-              500: '#e8dcc0',
-              600: '#d4c5a0',
-              700: '#b8a47d',
-              800: '#9a8660',
-              900: '#7d6d4d',
+            tea: {
+              paper: '#FFFDF7',
+              bg: '#F8F3E8',
+              line: '#C8B98E',
+              gold: '#C9A45D',
+              green: '#6F8A63',
+              greenDark: '#40563A',
+              text: '#273426',
+              muted: '#6F725F',
+              wash: '#EEF3E7',
+              hover: '#F7F3E8'
             }
+          },
+          fontFamily: {
+            serifTc: ['Noto Serif TC', 'Songti TC', 'PMingLiU', 'serif'],
+            sansTc: ['Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'sans-serif']
+          },
+          boxShadow: {
+            tea: '0 16px 40px rgba(64, 86, 58, 0.08)'
           }
         }
       }
     }
   </script>
+  <style>
+    body {
+      background:
+        radial-gradient(circle at 18% 12%, rgba(201, 164, 93, 0.12), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(111, 138, 99, 0.10), transparent 30%),
+        #F8F3E8;
+    }
+
+    .paper-texture {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)),
+        radial-gradient(circle at 1px 1px, rgba(64, 86, 58, 0.055) 1px, transparent 0);
+      background-size: auto, 18px 18px;
+    }
+
+    .corner-ornament::before,
+    .corner-ornament::after {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-color: #C9A45D;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .corner-ornament::before {
+      top: 14px;
+      left: 14px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      border-top-left-radius: 18px;
+    }
+
+    .corner-ornament::after {
+      right: 14px;
+      bottom: 14px;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+      border-bottom-right-radius: 18px;
+    }
+  </style>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K2VFG35D');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start':
+      new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K2VFG35D');</script>
   <!-- End Google Tag Manager -->
 </head>
 
-<body class="bg-[#FFFDF9] text-[#111] min-h-screen font-sans bg-no-repeat bg-cover bg-center"
-  >
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2VFG35D"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body class="min-h-screen font-sansTc text-tea-text">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2VFG35D" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
   <!-- Welcome Page -->
-  <div id="welcome-page" class="min-h-screen flex items-center justify-center p-4">
-    <div class="max-w-[460px] w-full text-center border border-black px-4 lg:px-8 py-6 lg:py-12 bg-white">
-      <h1 class="text-4xl lg:text-5xl font-bold tracking-tight mb-3  lg:mb-6 text-[#111]">茶韻性格測驗</h1>
-      <p class="text-lg text-[#4b5563] mb-3  lg:mb-6">MBTI Tea Personality Quiz</p>
-      <p class="text-[#111] leading-relaxed mb-3 lg:mb-6">
-        透過12道關於茶的問題，探索你獨特的性格特質。每個人都有屬於自己的茶韻，讓我們一起發現你內心深處的茶葉性格，找到最適合你的那一杯茶。
+  <div id="welcome-page" class="min-h-screen flex items-center justify-center px-5 py-8">
+    <div
+      class="paper-texture relative w-full max-w-[460px] rounded-[28px] border border-tea-line bg-tea-paper px-6 py-9 text-center shadow-tea lg:px-9 lg:py-12">
+      <div class="mb-6 flex items-center justify-center gap-3 text-tea-gold">
+        <span class="h-px w-12 bg-tea-line"></span>
+        <span class="text-sm">✦</span>
+        <span class="h-px w-12 bg-tea-line"></span>
+      </div>
+
+      <p class="mb-3 text-xs font-semibold tracking-[0.2em] text-tea-gold">TEA PERSONALITY QUIZ</p>
+      <h1 class="mb-4 font-serifTc text-4xl font-bold tracking-[0.08em] text-tea-text lg:text-5xl">
+        茶韻性格測驗
+      </h1>
+      <p class="mb-6 text-base tracking-wide text-tea-greenDark">MBTI Tea Personality Quiz</p>
+      <p class="mb-8 text-left leading-8 text-tea-muted lg:text-center">
+        透過 12 道關於茶的問題，探索你獨特的性格特質。每個人都有屬於自己的茶韻，讓我們一起發現你內心深處的茶葉性格，找到最適合你的那一杯茶。
       </p>
       <button id="start-quiz-btn"
-        class="bg-[#111] text-white font-semibold py-3 px-8 border border-[#111] hover:bg-[#000] hover:border-[#000] transition-colors duration-300 w-full">
+        class="w-full rounded-2xl border border-tea-green bg-tea-green px-8 py-3 font-semibold tracking-[0.08em] text-white transition hover:bg-tea-greenDark hover:border-tea-greenDark focus:outline-none focus-visible:ring-2 focus-visible:ring-tea-green focus-visible:ring-offset-2 focus-visible:ring-offset-tea-bg">
         開始測驗
       </button>
     </div>
   </div>
 
   <!-- Quiz Page -->
-  <div id="quiz-page" class="hidden min-h-screen p-4">
-    <div class="max-w-[400px] mx-auto">
+  <div id="quiz-page" class="hidden min-h-screen px-5 py-8">
+    <div
+      class="paper-texture relative mx-auto w-full max-w-[520px] rounded-[28px] border border-tea-line bg-tea-paper px-6 py-7 shadow-tea">
 
-      <!-- Progress Bar (步驟條) -->
-      <div class="mb-8">
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-[#4b5563] font-medium">進度</span>
-          <span id="progress-text" class="text-[#6b7280]">1 / 12</span>
-        </div>
-        <div class="w-full bg-black/5 h-2 rounded-full">
-          <div id="progress-bar" class="bg-[#111] h-2 rounded-full transition-all duration-500" style="width: 8.33%">
-          </div>
-        </div>
-      </div>
+<!-- Progress Bar（步驟條） -->
+<div class="mb-8">
+  <div class="flex justify-between items-center mb-2">
+    <span class="text-[#4b5563] font-medium">進度</span>
+    <span id="progress-text" class="text-[#6b7280]">1 / 12</span>
+  </div>
+
+  <div class="w-full bg-black/5 h-2 rounded-full">
+    <div
+      id="progress-bar"
+      class="h-2 rounded-full transition-all duration-500"
+      style="width: 8.33%; background-color: #6F8A63;"
+    ></div>
+  </div>
+</div>
+
       <!-- Question Image -->
-      <div class="flex justify-center mb-4">
-        <img id="question-image" src="" alt="Question Image" class="max-w-[400px] w-3/5 h-auto" />
+      <div class="mb-5 flex justify-center">
+        <img id="question-image" src="" alt="Question Image"
+          class="max-w-[260px] w-3/5 h-auto rounded-2xl object-contain" />
+      </div>
+
+      <!-- Ornament divider -->
+      <div class="mb-7 flex items-center gap-3 text-tea-gold">
+        <div class="h-px flex-1 bg-tea-line"></div>
+        <span class="text-sm">✦</span>
+        <div class="h-px flex-1 bg-tea-line"></div>
       </div>
 
       <!-- Question -->
-      <h2 id="question-text" class="text-2xl font-bold mb-6 leading-snug text-[#111]">
-        <!-- Question will be inserted here -->
-      </h2>
+      <section class="mb-8">
+        <p class="mb-3 text-xs font-semibold tracking-[0.18em] text-tea-gold">TEA QUESTION</p>
+        <h2 id="question-text" class="font-serifTc text-[28px] font-bold leading-[1.45] tracking-[0.03em] text-tea-text">
+          <!-- Question will be inserted here -->
+        </h2>
+      </section>
 
       <!-- Answer Options -->
       <div class="space-y-4">
-        <button id="option-a"
-          class="w-full text-left border border-black bg-white p-4 lg:hover:bg-black/5 transition-all duration-100 ease-in-out">
-          <div class="flex items-center gap-4">
-           <span class="bg-[#111] text-white w-8 h-8 rounded-sm flex items-center justify-center font-bold shrink-0">A</span>
-            <span id="option-a-text" class="text-[#111]"></span>
+        <button id="option-a" type="button"
+          class="group w-full rounded-2xl border border-tea-line bg-tea-paper p-4 text-left transition hover:border-tea-green hover:bg-tea-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-tea-green focus-visible:ring-offset-2 focus-visible:ring-offset-tea-bg">
+          <div class="flex items-start gap-4">
+            <span
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-tea-line bg-tea-wash font-serifTc text-xl font-bold text-tea-greenDark transition group-hover:bg-[#DDE8D4]">A</span>
+            <span id="option-a-text" class="pt-1 text-base font-medium leading-7 text-tea-text"></span>
           </div>
         </button>
 
-        <button id="option-b"
-          class="w-full text-left border border-black bg-white p-4 lg:hover:bg-black/5 transition-all duration-100 ease-in-out">
-          <div class="flex items-center gap-4">
-           <span class="bg-[#111] text-white w-8 h-8 rounded-sm flex items-center justify-center font-bold shrink-0">B</span>
-            <span id="option-b-text" class="text-[#111]"></span>
+        <button id="option-b" type="button"
+          class="group w-full rounded-2xl border border-tea-line bg-tea-paper p-4 text-left transition hover:border-tea-green hover:bg-tea-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-tea-green focus-visible:ring-offset-2 focus-visible:ring-offset-tea-bg">
+          <div class="flex items-start gap-4">
+            <span
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-tea-line bg-tea-wash font-serifTc text-xl font-bold text-tea-greenDark transition group-hover:bg-[#DDE8D4]">B</span>
+            <span id="option-b-text" class="pt-1 text-base font-medium leading-7 text-tea-text"></span>
           </div>
         </button>
+      </div>
 
+      <div class="mt-8 flex items-center justify-center gap-2 text-tea-gold">
+        <span class="h-px w-10 bg-tea-line"></span>
+        <span class="text-xs tracking-[0.18em]">茶葉人格測驗</span>
+        <span class="h-px w-10 bg-tea-line"></span>
       </div>
     </div>
   </div>
 
   <!-- Result Page -->
-  <div id="result-page" class="hidden min-h-screen p-8">
-    <div class="max-w-[400px] mx-auto">
-
-      <!-- Title with line -->
-      <div class="flex items-center mb-4">
-        <h2 class="text-2xl font-bold text-[#111] whitespace-nowrap mr-4">你的茶葉人格是</h2>
-        <div class="flex-1 border-t border-black"></div>
-      </div>
+  <div id="result-page" class="hidden min-h-screen px-5 py-8">
+    <div class="mx-auto w-full max-w-[700px]">
 
       <!-- Character Image -->
-      <div>
-        <img id="result-image" src="images/ISTJ.jpg" alt="MBTI Character" class="w-full h-auto">
+      <div class="overflow-hidden rounded-[28px] border border-tea-line bg-tea-paper shadow-tea py-4">
+        <img id="result-image" src="images/ISTJ.jpg" alt="MBTI Character" class="h-auto w-full">
       </div>
 
       <!-- Restart Button -->
-      <div class="text-center mt-4">
+      <div class="mt-5 text-center">
         <button id="restart-btn"
-          class="bg-[#111] text-white px-6 py-3 font-semibold border border-black hover:bg-[#000] transition-colors duration-300 w-full">
+          class="w-full rounded-2xl border border-tea-green bg-tea-green px-6 py-3 font-semibold tracking-[0.08em] text-white transition hover:bg-tea-greenDark hover:border-tea-greenDark focus:outline-none focus-visible:ring-2 focus-visible:ring-tea-green focus-visible:ring-offset-2 focus-visible:ring-offset-tea-bg">
           重新測驗
         </button>
       </div>
     </div>
   </div>
 
-
   <script src="quiz.js"></script>
 </body>
-
-
-
-
 
 </html>
